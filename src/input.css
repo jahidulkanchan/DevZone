@@ -2,27 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-  .img{
+@layer base {
+  .img {
     width: 100%;
   }
-  .logo img{
+  .logo img {
     filter: drop-shadow(1px 1px 0px black);
   }
-  .container{
+  .container {
+    margin: 0 auto;
     padding: 0px 50px;
   }
+  .primary-btn a {
+    display: inline-block;
+    background-color: blueviolet;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 30px;
+    transition: all .2s ease;
+  }
+  .primary-btn a:hover {
+    background-color: #892be2b8;
+  }
   @media (max-width: 768px) {
-    .container{
+    .container {
       padding: 0px 20px;
     }
   }
   @media (max-width: 556px) {
-    .container{
+    .container {
       padding: 0px 10px;
     }
   }
-}
-@layer utilities{
-  
 }

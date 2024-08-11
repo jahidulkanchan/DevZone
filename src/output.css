@@ -446,26 +446,40 @@ video {
   display: none;
 }
 
-.img{
+.img {
   width: 100%;
 }
 
-.logo img{
+.logo img {
   filter: drop-shadow(1px 1px 0px black);
 }
 
-.container{
+.container {
+  margin: 0 auto;
   padding: 0px 50px;
 }
 
+.primary-btn a {
+  display: inline-block;
+  background-color: blueviolet;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 30px;
+  transition: all .2s ease;
+}
+
+.primary-btn a:hover {
+  background-color: #892be2b8;
+}
+
 @media (max-width: 768px) {
-  .container{
+  .container {
     padding: 0px 20px;
   }
 }
 
 @media (max-width: 556px) {
-  .container{
+  .container {
     padding: 0px 10px;
   }
 }
@@ -628,6 +642,10 @@ video {
   margin-inline-end: 0.5rem;
 }
 
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
 .block {
   display: block;
 }
@@ -701,17 +719,26 @@ video {
   padding-bottom: 0.75rem;
 }
 
-.pt-32 {
-  padding-top: 8rem;
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.pt-24 {
+  padding-top: 6rem;
+}
+
+.pt-3 {
+  padding-top: 0.75rem;
 }
 
 .text-center {
   text-align: center;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-sm {
@@ -719,8 +746,8 @@ video {
   line-height: 1.25rem;
 }
 
-.text-5xl {
-  font-size: 3rem;
+.text-6xl {
+  font-size: 3.75rem;
   line-height: 1;
 }
 
@@ -745,6 +772,14 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 @media (min-width: 640px) {
   .sm\:flex {
     display: flex;
@@ -756,12 +791,13 @@ video {
 }
 
 @media (min-width: 768px) {
-  .md\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
+  .md\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
-  .md\:leading-\[60px\] {
-    line-height: 60px;
+  .md\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
   }
 }
